@@ -1,0 +1,26 @@
+$TTL	30
+@					1D IN SOA	ns1 prueba (
+					2021032502	; serial
+					12H		; refresh
+					4320		; retry
+					4W		; expiry
+					30)		; negative cache
+
+@					IN	NS	servidor
+@					IN	NS	e-linux
+
+pasarela				IN	A	10.110.34.1
+servidor				IN	A	10.110.34.2
+e-linux					IN	A	10.110.34.3
+e-windows				IN	A	10.110.34.4
+
+p-ABR					IN	CNAME	pasarela.r34.redes.dis.ulpgc.es.
+s-ABR					IN	CNAME	servidor.r34.redes.dis.ulpgc.es.
+l-ABR					IN	CNAME	e-linux.r34.redes.dis.ulpgc.es.
+w-ABR					IN	CNAME	e-windows.r34.redes.dis.ulpgc.es.
+
+
+ns1					IN	CNAME	servidor.r34.redes.dis.ulpgc.es.
+www					IN	CNAME	e-linux.r34.redes.dis.ulpgc.es.
+
+smtp					IN	CNAME	servidor.r34.redes.dis.ulpgc.es.

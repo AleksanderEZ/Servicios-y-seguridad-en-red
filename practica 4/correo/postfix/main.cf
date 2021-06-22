@@ -1,0 +1,32 @@
+myhostname = servidor.r34.redes.dis.ulpgc.es
+
+mydomain = r34.redes.dis.ulpgc.es
+
+myorigin = $mydomain
+
+inet_interfaces = all
+
+inet_protocols = ipv4
+
+mydestination = $mydomain, $myhostname, localhost.$mydomain, localhost
+
+mynetworks = 10.110.34.0/24, 127.0.0.0/8
+
+relayhost = [neptuno.redes.dis.ulpgc.es]
+
+always_add_missing_headers = yes
+
+alias_maps = hash:/etc/postfix/aliases
+
+alias_database = hash:/etc/postfix/aliases
+
+smtpd_delay_reject = no
+
+transport_maps = hash:/etc/postfix/transport
+
+smtpd_helo_required = yes
+
+smtpd_banner = Bienvenido al servidor de correos del dominio $myhostname
+
+smtpd_relay_restrictions = permit_mynetworks, check_client_access hash:/etc/postfix/maquinas, reject_unauth_destination
+

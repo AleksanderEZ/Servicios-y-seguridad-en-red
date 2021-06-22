@@ -1,0 +1,2 @@
+iptables actualizado donde se vean las reglas de acceso entre servidor de correo y neptuno saliente y entrante
+main.cf y master.cf y el de neptuno que pueda salir correo (texto plano, no base de datos)

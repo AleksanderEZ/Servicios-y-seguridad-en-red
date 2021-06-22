@@ -1,0 +1,15 @@
+$TTL	30
+@			1D IN SOA	ns1.r34.redes.dis.ulpgc.es. prueba.r34.redes.dis.ulpgc.es. (
+					2021032501	; serial
+					12H		; refresh
+					4320		; retry
+					4W		; expiry
+					30)		; negative cache
+
+@					IN	NS	servidor.r34.redes.dis.ulpgc.es.
+@					IN	NS	estacion.r34.redes.dis.ulpgc.es.
+
+1					IN	PTR	pasarela.r34.redes.dis.ulpgc.es.
+2					IN	PTR	servidor.r34.redes.dis.ulpgc.es.
+3					IN	PTR	e-linux.r34.redes.dis.ulpgc.es.
+4					IN	PTR	e-windows.r34.redes.dis.ulpgc.es.
